@@ -1,0 +1,7 @@
+<template name="reactiveOverlaysTemplate">
+    {{#if isVisible}}
+    <div id="overlayMask" class="overlay-mask"></div>
+    <div id="overlayImage" class="{{isImageVisible}} overlay-image"><img src="{{imageSrc}}"></img></div>
+    <div id="overlayTemplate"  class="{{isTemplateVisible}} overlay-template"></div>
+    {{/if}}
+</template>
