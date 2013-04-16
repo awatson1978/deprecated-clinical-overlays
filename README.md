@@ -12,7 +12,7 @@ mrt add reactive-overlays
 ````
 
 ------------------------
-### Data/Document Model
+### Document Model
 
 Second, add the reactiveOverlaysTemplate to your application, which adds the nececssary overlay templates.  In theory, you should be able to add the template just about anywhere in the application, but the recommend location is at the footer of your application container.  So, something like so:  
 
@@ -26,7 +26,7 @@ Second, add the reactiveOverlaysTemplate to your application, which adds the nec
 ````
 
 ------------------------
-### Controllers - 
+### Controllers
 
 The beauty of using a native spark template for creating an overlay, instead of a third party library, is the only thing you need to do is set the following Session variable, and Bam! You got an overlay!
 ````js
