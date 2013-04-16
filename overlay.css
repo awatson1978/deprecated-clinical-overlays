@@ -1,4 +1,3 @@
-
 .overlay-mask{
   position: fixed !important;
   top: 0px !important;
@@ -20,4 +19,7 @@
     width: 940px;
     margin-left: -50%;
     margin-bottom: -50%;
+}
+.hidden{
+  visibility: hidden;
 }
