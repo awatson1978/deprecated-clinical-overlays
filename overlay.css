@@ -14,6 +14,7 @@
     z-index: 10000;
     width: 880px;
     position: fixed;
+    cursor: pointer;
 }
 .overlay-image img{
     margin-left: -50%;

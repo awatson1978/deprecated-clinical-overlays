@@ -49,6 +49,9 @@ Template.reactiveOverlaysTemplate.imageSrc = function(){
 Template.reactiveOverlaysTemplate.events({
     'click .overlay-mask': function(evt){
         hideOverlay();
+    },
+    'click .overlay-image': function(evt){
+        hideOverlay();
     }
 });
 Template.reactiveOverlaysTemplate.rendered = function(){
