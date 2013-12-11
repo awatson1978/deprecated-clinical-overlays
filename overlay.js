@@ -56,7 +56,7 @@ Template.reactiveOverlaysTemplate.events({
 Template.reactiveOverlaysTemplate.rendered = function(){
     if(Session.get('show_overlay_image')){
         $('.overlay-image').css('left', (window.innerWidth / 2));
-        $('.overlay-image').css('top', '50px');
+        //$('.overlay-image').css('top', '50px');
     }else if(Session.get('show_overlay_template')){
         $('#overlayTemplate').append($(Session.get('overlay_template_reference_id')).html())
     }
