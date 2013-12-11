@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+    api.use('standard-app-packages','client');
     api.use('templating','client');
 
     api.add_files('overlay.html', "client");
