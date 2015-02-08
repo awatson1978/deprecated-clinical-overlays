@@ -8,7 +8,7 @@ So, after trying probably five or six libraries for creating overlays, I said to
 First, install the reactive-overlays package from the command line, like so:
 
 ````
-mrt add reactive-overlays
+meteor add clinical:overlays
 ````
 
 ------------------------
@@ -67,4 +67,3 @@ Template.samplePageTemplate.events({
 ### License
 
 MIT License. Use as you wish, including for commercial purposes.  
-See license.mit.txt for full details.  
