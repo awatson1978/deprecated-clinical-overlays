@@ -13,8 +13,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-    api.use('standard-app-packages','client');
-    api.use('templating','client');
+    api.use('standard-app-packages@1.0.4','client');
+    api.use('templating@1.0.11','client');
 
     api.add_files('overlay.html', "client");
     api.add_files('overlay.css', "client");
