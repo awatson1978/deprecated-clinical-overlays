@@ -10,12 +10,12 @@ Session.set('show_overlay_template', false);
 Session.set('overlay_template_reference_id', null);
 
 
-
 //---------------------------------------------------------------------
-// Reactive Templates
+// TEMPLATE INPUTS
 
 
-Template.reactiveOverlaysTemplate.isVisible = function(){
+Template.reactiveOverlaysTemplate.helpers({
+  isVisible: function(){
     if(Session.get('show_reactive_overlay')){
         return true;
     }else if (Session.get('show_overlay_image')){
@@ -23,35 +23,28 @@ Template.reactiveOverlaysTemplate.isVisible = function(){
     }else{
         return false;
     }
-};
-Template.reactiveOverlaysTemplate.isImageVisible = function(){
+  },
+  isImageVisible: function () {
     if(Session.get('show_overlay_image')){
         return '';
     }else{
         return 'hidden';
     }
-};
-Template.reactiveOverlaysTemplate.isTemplateVisible = function(){
+  },
+  isTemplateVisible: function () {
     if(Session.get('overlay_template_reference_id') != null){
         return '';
     }else{
         return 'hidden';
     }
-};
-Template.reactiveOverlaysTemplate.imageSrc = function(){
+  },
+  imageSrc: function () {
     if(Session.get('overlay_image_path') != null){
         return Session.get('overlay_image_path');
     }else{
         return 'images/placeholder-240x240.gif';
     }
-};
-Template.reactiveOverlaysTemplate.events({
-    'click .overlay-mask': function(evt){
-        hideOverlay();
-    },
-    'click .overlay-image': function(evt){
-        hideOverlay();
-    }
+  },
 });
 Template.reactiveOverlaysTemplate.rendered = function(){
     if(Session.get('show_overlay_image')){
@@ -61,6 +54,19 @@ Template.reactiveOverlaysTemplate.rendered = function(){
         $('#overlayTemplate').append($(Session.get('overlay_template_reference_id')).html())
     }
 }
+
+
+//---------------------------------------------------------------------
+// TEMPLATE INPUTS
+
+Template.reactiveOverlaysTemplate.events({
+    'click .overlay-mask': function(evt){
+        hideOverlay();
+    },
+    'click .overlay-image': function(evt){
+        hideOverlay();
+    }
+});
 
 
 //---------------------------------------------------------------------
