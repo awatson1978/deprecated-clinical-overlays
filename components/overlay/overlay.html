@@ -1,9 +1,18 @@
 <template name="reactiveOverlaysTemplate">
+  <div id="reactiveOverlayTemplate">
     {{#if isVisible}}
-    <div id="overlayMask" class="overlay-mask"></div>
-    <div id="overlayImage" class="{{isImageVisible}} overlay-image">
-        <img class="with-rounded-corners" src="{{imageSrc}}">
-    </div>
+      {{#if isConfirmModal }}
+        <div id="overlayConfirmModal" style="{{getMainPanelLeft}}">
+          {{> confirmModal }}
+        </div>
+      {{/if}}
+
+      <div id="overlayMask" class="overlay-mask"></div>
+      <div id="overlayImage" class="{{isImageVisible}} overlay-image">
+          <img class="with-rounded-corners" src="{{imageSrc}}">
+      </div>
+
     <div id="overlayTemplate"  class="{{isTemplateVisible}} overlay-template"></div>
     {{/if}}
+  </div>
 </template>
