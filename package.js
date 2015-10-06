@@ -13,6 +13,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  api.versionsFrom('1.1.0.2');
+
   api.use('meteor-platform');
   api.use('less');
   api.use('clinical:modals');
