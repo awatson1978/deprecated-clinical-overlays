@@ -25,7 +25,7 @@ Template.reactiveOverlaysTemplate.helpers({
     if (Session.get('show_reactive_overlay')) {
       return true;
     } else if (Session.get('show_overlay_image')) {
-      return true
+      return true;
     } else {
       return false;
     }
@@ -80,8 +80,6 @@ Template.reactiveOverlaysTemplate.events({
 // API Functions
 
 showImageOverlay = function (elementId) {
-  //    $(elementId).removeClass('hidden');
-  //    Session.set('overlay_image_id', elementId);
   Session.set('overlay_image_path', $(elementId).attr('src'));
   Session.set('show_reactive_overlay', true);
   Session.set('show_overlay_image', true);
@@ -92,7 +90,6 @@ showTutorialOverlay = function (elementId) {
   Session.set('show_overlay_template', true);
 };
 hideOverlay = function () {
-  //    $(Session.get('overlay_image_id')).addClass('hidden');
   Session.set('show_overlay_image', false);
   Session.set('show_overlay_template', false);
   Session.set('show_reactive_overlay', false);
@@ -101,4 +98,5 @@ hideOverlay = function () {
 hideKnownModals = function () {
   Session.set('show_keybindings', false);
   Session.set('show_users_picklist', false);
+  Session.set('show_study_picklist', false);
 };
