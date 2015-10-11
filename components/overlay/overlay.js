@@ -15,11 +15,11 @@ Session.set('overlay_template_reference_id', null);
 
 
 Template.reactiveOverlaysTemplate.helpers({
-  getMainPanelLeft: function(){
-    return "left: " +  ($('#mainPanel').position().left + 20) + "px;"
+  getMainPanelLeft: function () {
+    return "left: " + ($('#mainPanel').position().left + 20) + "px;"
   },
-  isConfirmModal: function (){
-    return true;
+  isConfirmModal: function () {
+    return false;
   },
   isVisible: function () {
     if (Session.get('show_reactive_overlay')) {
@@ -59,7 +59,7 @@ Template.reactiveOverlaysTemplate.rendered = function () {
   } else if (Session.get('show_overlay_template')) {
     $('#overlayTemplate').append($(Session.get('overlay_template_reference_id')).html())
   }
-}
+};
 
 
 //---------------------------------------------------------------------
@@ -68,6 +68,7 @@ Template.reactiveOverlaysTemplate.rendered = function () {
 Template.reactiveOverlaysTemplate.events({
   'click .overlay-mask': function (evt) {
     hideOverlay();
+    hideKnownModals();
   },
   'click .overlay-image': function (evt) {
     hideOverlay();
@@ -95,4 +96,9 @@ hideOverlay = function () {
   Session.set('show_overlay_image', false);
   Session.set('show_overlay_template', false);
   Session.set('show_reactive_overlay', false);
-}
+};
+
+hideKnownModals = function () {
+  Session.set('show_keybindings', false);
+  Session.set('show_users_picklist', false);
+};

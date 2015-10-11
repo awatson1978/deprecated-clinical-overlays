@@ -16,8 +16,8 @@ Package.on_use(function (api) {
   api.versionsFrom('1.1.0.2');
 
   api.use('meteor-platform');
-  api.use('less');
-  api.use('clinical:modals@0.0.1');
+  api.use('grove:less@0.1.1');
+  api.use('clinical:modals@0.0.2');
 
   api.addFiles('lib/overlay.js', "client");
 
