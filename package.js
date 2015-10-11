@@ -2,7 +2,7 @@ Package.describe({
   summary: "Add image and content overlays to a Clinical Meteor app.",
 
   // update this value before you run 'meteor publish'
-  version: "1.1.1",
+  version: "1.1.2",
 
   // if this value isn't set, meteor will default to the directory name
   name: "clinical:overlays",
